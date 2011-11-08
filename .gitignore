@@ -1,0 +1,8 @@
+*.suo
+*.user
+.git
+_Resharper.*
+*.dll
+*.pdb
+[Oo]bj
+[Bb]in
