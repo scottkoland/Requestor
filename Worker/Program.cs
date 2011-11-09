@@ -1,8 +1,10 @@
 ﻿
+using System.IO;
 using MassTransit;
 using Topshelf;
 using System;
 using Core;
+using log4net.Config;
 
 namespace Worker
 {
@@ -10,6 +12,8 @@ namespace Worker
     {
         static void Main(string[] args)
         {
+            XmlConfigurator.Configure(new FileInfo("requestor.log4net.xml"));
+
             HostFactory.Run(c =>
             {
                 c.SetServiceName("TestService");
